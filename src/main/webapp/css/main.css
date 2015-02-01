@@ -7,3 +7,11 @@
 div > .btn-custom{
     margin-bottom: 11px;
 }
+.titlebar{
+    margin-bottom: 9px;
+    margin-top: -21px;
+}
+.titlebar > div{
+    padding: 3px;
+    padding-left: 31px;
+}
