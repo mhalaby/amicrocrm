@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="aMicroCrm:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="wicketspringhibernateexample.war">
+      <element id="artifact" artifact-name="aMicroCrm:war exploded" />
+    </root>
+  </artifact>
+</component>
