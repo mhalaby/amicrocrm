@@ -21,7 +21,7 @@ public class NavigationPanel extends Panel {
         Link customersLink = new Link("customers") {
             @Override
             public void onClick() {
-//                this.setResponsePage(new MovieListPage());
+                this.setResponsePage(new CustomerPage());
             }
         };
         this.add(customersLink);

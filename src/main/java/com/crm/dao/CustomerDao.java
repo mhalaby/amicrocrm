@@ -18,4 +18,5 @@ public interface CustomerDao
 	 */
 	public List<Customer> getCustomers();
     public List<Customer> getCustomersName();
+    public void saveCustomer(Customer customer);
 }

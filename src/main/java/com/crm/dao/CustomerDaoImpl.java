@@ -31,4 +31,10 @@ public class CustomerDaoImpl implements CustomerDao
     public List<Customer> getCustomersName() {
         return this.sessionFactory.getCurrentSession().createQuery("select c.first_name from com.crm.model.Customer c").list();
     }
+
+    @Override
+    public void saveCustomer(Customer customer) {
+        this.sessionFactory.getCurrentSession().saveOrUpdate(customer);
+    }
+
 }

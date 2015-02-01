@@ -19,14 +19,10 @@ public class CustomerServiceImpl implements CustomerService
 	 */
 	@Autowired
 	protected CustomerDao customerDao;
-    public String getCustomers()
+    public List<Customer> getCustomers()
 	{
 		List<Customer> customers = customerDao.getCustomers();
 		logger.info( "customerDao returned " + customers.size() + " customers" );
-		if( customers.size() > 0 )
-		{
-			return customers.get( 1 ).getEmail();
-		}
-		return "Hello, Spring";
+		return customers;
 	}
 }

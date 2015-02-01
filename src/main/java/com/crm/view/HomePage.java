@@ -25,7 +25,7 @@ public class HomePage extends BasePage {
 
         // Add the simplest type of label
         //add(new Label("message", "If you see this message wicket is properly configured and running"));
-        add( new Label( "customer", customerService.getCustomers() ) );
+        add( new Label( "customer", "Welcome" ) );
 
     }
 }
