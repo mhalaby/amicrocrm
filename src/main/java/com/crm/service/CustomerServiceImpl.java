@@ -25,4 +25,16 @@ public class CustomerServiceImpl implements CustomerService
 		logger.info( "customerDao returned " + customers.size() + " customers" );
 		return customers;
 	}
+
+    @Override
+    public Customer fetch(Long id) {
+        return customerDao.fetch(id);
+    }
+
+    @Override
+    public void save(Customer customer) {
+        customerDao.saveCustomer(customer);
+        logger.info( "customerDao saved");
+
+    }
 }

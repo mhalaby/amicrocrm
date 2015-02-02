@@ -37,4 +37,10 @@ public class CustomerDaoImpl implements CustomerDao
         this.sessionFactory.getCurrentSession().saveOrUpdate(customer);
     }
 
+    @Override
+    public Customer fetch(Long id) {
+        return (Customer) sessionFactory.getCurrentSession().get(Customer.class, id);
+    }
+
+
 }

@@ -9,12 +9,9 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.model.IModel;
 
 public class BasePage extends WebPage {
-    public BasePage() {
-        this(null);
-    }
 
-    public BasePage(IModel model) {
-        super(model);
+
+    public BasePage() {
         Date now = new Date();
         NavigationPanel navigationPanel = new NavigationPanel("navigationPanel");
         this.add(navigationPanel);

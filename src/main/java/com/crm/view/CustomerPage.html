@@ -8,16 +8,19 @@
                 <h4>List of Customers</h4>
             </div>
         </div>
+        <div wicket:id="customerModal"></div>
+
         <div class="container">
 
             <div>
                 <button type="button" class="btn btn-default btn-custom"><span class="glyphicon glyphicon-arrow-left"></span></button>
-                <button type="button" class="btn btn-default btn-custom"><span class="glyphicon glyphicon-plus"></span> New</button>
+                <button type="button" class="btn btn-default btn-custom"   wicket:id="showCustomerModal"><span class="glyphicon glyphicon-plus"></span> New</button>
 
             </div>
         <div class="panel panel-default">
 
             <div class="panel-body">
+                <form wicket:id="form">
                 <table class="table table-hover table-striped">
                     <thead>
                     <tr>
@@ -34,6 +37,7 @@
                         <td><span wicket:id="email"></span></td>
                     </tr>
                 </table>
+                </form>
             </div>
         </div>
         </div>
