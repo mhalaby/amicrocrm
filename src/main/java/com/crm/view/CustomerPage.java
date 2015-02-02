@@ -75,8 +75,8 @@ public class CustomerPage extends BasePage {
         customerModal.setCloseButtonCallback(new ModalWindow.CloseButtonCallback() {
 
             @Override
-            public boolean onCloseButtonClicked(AjaxRequestTarget ajaxRequestTarget) {
-                ajaxRequestTarget.add(CustomerPage.this.form);
+            public boolean onCloseButtonClicked(AjaxRequestTarget target) {
+                target.add(CustomerPage.this.form);
                 return true;
             }
         });

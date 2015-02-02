@@ -43,3 +43,12 @@ div > .btn-custom{
     margin-right: 11px;
     background-color: #E7E7E7;
 }
+.feedback {
+    margin-top: -82px;
+    margin-left: 148px;
+    position: fixed;
+    background-color: rgba(232, 232, 232, 0.5);
+}
+ul.feedbackPanel{
+    color: red;
+}
