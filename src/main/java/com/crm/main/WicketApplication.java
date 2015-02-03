@@ -44,7 +44,6 @@ public class WicketApplication extends AuthenticatedWebApplication
 
     @Override
     protected Class<? extends WebPage> getSignInPageClass() {
-        System.out.println("LOGIN");
         return LoginPage.class;
     }
 

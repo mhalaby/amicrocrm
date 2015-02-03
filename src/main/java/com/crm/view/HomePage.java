@@ -1,5 +1,6 @@
 package com.crm.view;
 
+import com.crm.main.UserAuthenticatedWebSession;
 import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.spring.injection.annot.SpringBean;
@@ -23,10 +24,9 @@ public class HomePage extends BasePage {
 	 *            Page parameters
 	 */
     public HomePage() {
+        UserAuthenticatedWebSession session=(UserAuthenticatedWebSession)getSession();
 
-        // Add the simplest type of label
-        //add(new Label("message", "If you see this message wicket is properly configured and running"));
-        add( new Label( "customer", "Welcome" ) );
+        add( new Label( "welcome", "Welcome " + session.getUsername()) );
 
     }
 }

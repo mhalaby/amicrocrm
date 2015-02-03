@@ -51,9 +51,8 @@ public class CustomerPage extends BasePage {
         AjaxLink newButton= createNewButton(customerModal);
         this.add(newButton);
         checkRoles(newButton);
+        this.add(createGoHomeButton());
     }
-
-
 
     public AjaxLink createNewButton(final ModalWindow customerModal){
         return new AjaxLink<Void>("showCustomerModal")
@@ -61,6 +60,15 @@ public class CustomerPage extends BasePage {
             @Override
             public void onClick(AjaxRequestTarget target) {
                 customerModal.show(target);
+            }
+        };
+    }
+    public AjaxLink createGoHomeButton(){
+        return new AjaxLink<Void>("home")
+        {
+            @Override
+            public void onClick(AjaxRequestTarget target) {
+                this.setResponsePage(new HomePage());
             }
         };
     }

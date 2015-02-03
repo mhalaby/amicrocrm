@@ -1,11 +1,27 @@
 <html xmlns:wicket="http://wicket.apache.org">
 <head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 </head>
 <body>
-<p>
-    <i>Username and password are both "wicket"</i>
-</p>
-<span wicket:id="signInPanel"/>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <h1 class="text-center login-title">A Very Micro Crm</h1>
+            <div class="account-wall">
+                <img class="profile-img"
+                     src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                     alt="">
+                <span wicket:id="signInPanel"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>

@@ -25,7 +25,7 @@ public class UserAuthenticatedWebSession extends AuthenticatedWebSession {
 
 
     private HttpSession httpSession;
-
+    private String username = "";
     @SpringBean(name = "authenticationManager")
     private AuthenticationManager authenticationManager;
     /**
@@ -49,7 +49,7 @@ public class UserAuthenticatedWebSession extends AuthenticatedWebSession {
     public boolean authenticate(final String username, final String password)
     {
         logger.info("starts authenticating.." + username+" "+password);
-
+        setUsername(username);
         try {
             Authentication auth = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
             if (auth.isAuthenticated()) {
@@ -87,6 +87,12 @@ public class UserAuthenticatedWebSession extends AuthenticatedWebSession {
         }
     }
 
+    public String getUsername() {
+        return username;
+    }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
 }
