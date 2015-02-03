@@ -40,15 +40,7 @@ public class NewCustomerPanel extends Panel {
         form.add(new TextField<Customer>("lastName").setRequired(true));
         form.add(new TextField<Customer>("organization").setRequired(true));
         form.add(new TextField<Customer>("email").setRequired(true));
-//        form.add(new Button("submit") {
-//            @Override
-//            public void onSubmit() {
-//                if(Session.get().getFeedbackMessages().size() == 0) {
-//                    customerService.save(customerModel.getObject());
-//                    info("Customer was saved");
-//                }
-//            }
-//        });
+
         form.add(new AjaxSubmitLink("submit") {
             @Override
             protected void onSubmit(AjaxRequestTarget target, Form<?> form) {

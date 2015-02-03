@@ -8,26 +8,23 @@
     <http use-expressions="true" create-session="never" auto-config="true">
         <remember-me />
         <intercept-url pattern="/" access="permitAll" />
-        <intercept-url pattern="/home" access="hasRole('ADMIN')" />
+        <intercept-url pattern="/home" access="hasRole('ROLE_USER')" />
         <intercept-url pattern="/login" access="permitAll" />
-        <intercept-url pattern="/customers" access="hasRole('ADMIN')" />
+        <intercept-url pattern="/customers" access="hasRole('ROLE_USER')" />
         <intercept-url pattern="/**/*.png" access="permitAll" />
         <intercept-url pattern="/**/*.css" access="permitAll" />
-        <intercept-url pattern="/secure/extreme/**" access="hasRole('ADMIN')" />
-        <intercept-url pattern="/secure/**" access="isAuthenticated()" />
-        <intercept-url pattern="/**" access="denyAll" />
         <!-- the login page is a wicket page mounted in WicketApplication.init() -->
         <form-login login-page="/login" />
     </http>
 
     <authentication-manager alias="authenticationManager">
-        <authentication-provider>
-            <user-service>
-                <user name="rod" password="koala" authorities="ADMIN, teller, user" />
-                <user name="dianne" password="emu" authorities="teller, user" />
-                <user name="scott" password="wombat" authorities="user" />
-                <user name="peter" password="opal" authorities="user" />
-            </user-service>
+        <authentication-provider user-service-ref="userService" >
+            <!--<user-service>-->
+                <!--<user name="rod" password="koala" authorities="ADMIN, teller, user" />-->
+                <!--<user name="dianne" password="emu" authorities="teller, user" />-->
+                <!--<user name="scott" password="wombat" authorities="user" />-->
+                <!--<user name="peter" password="opal" authorities="user" />-->
+            <!--</user-service>-->
         </authentication-provider>
     </authentication-manager>
 

@@ -1,8 +1,10 @@
 package com.crm.view;
 
+import com.crm.main.UserAuthenticatedWebSession;
 import com.crm.model.Customer;
 import com.crm.service.CustomerService;
 import org.apache.log4j.Logger;
+import org.apache.wicket.Component;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
 import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
@@ -20,7 +22,6 @@ import java.util.List;
 /**
  * Customerpage
  */
-@AuthorizeInstantiation("ADMIN")
 public class CustomerPage extends BasePage {
     private static final long serialVersionUID = 1L;
     private static Logger logger = Logger.getLogger( CustomerPage.class );
@@ -47,8 +48,13 @@ public class CustomerPage extends BasePage {
         form.setOutputMarkupId(true);
         customerModal = createNewCustomerModal("customerModal",new Customer());
         this.add(customerModal);
-        this.add(createNewButton(customerModal));
+        AjaxLink newButton= createNewButton(customerModal);
+        this.add(newButton);
+        checkRoles(newButton);
     }
+
+
+
     public AjaxLink createNewButton(final ModalWindow customerModal){
         return new AjaxLink<Void>("showCustomerModal")
         {
@@ -78,8 +84,12 @@ public class CustomerPage extends BasePage {
                 item.add(new Label("email"));
                 ModalWindow editModal = createNewCustomerModal("editCustomerModal",customer);
                 item.add(editModal);
-                item.add(createNewButton(editModal));
-                item.add(createDeleteButton(customer));
+                AjaxLink editButton= createNewButton(editModal);
+                AjaxLink deleteButton= createDeleteButton(customer);
+                item.add(editButton);
+                item.add(deleteButton);
+                checkRoles(editButton);
+                checkRoles(deleteButton);
             }
         };
     }

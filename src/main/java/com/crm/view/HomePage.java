@@ -9,7 +9,7 @@ import com.crm.service.CustomerService;
 /**
  * Homepage
  */
-@AuthorizeInstantiation("ADMIN")
+
 public class HomePage extends BasePage {
 	private static final long serialVersionUID = 1L;
 	

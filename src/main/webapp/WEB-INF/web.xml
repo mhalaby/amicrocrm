@@ -41,7 +41,7 @@
  		
 		<init-param>
 			<param-name>applicationClassName</param-name>
-			<param-value>com.crm.WicketApplication</param-value>
+			<param-value>com.crm.main.WicketApplication</param-value>
  		</init-param>
  	</filter>
     <filter-mapping>
