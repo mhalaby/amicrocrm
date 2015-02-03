@@ -2,59 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="551cd2a2-196f-4053-bcd9-7031d459530d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/NavigationPanel$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/NavigationPanel$3.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage$3.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage$4.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage$4.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage$5.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage$5.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage$6.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage$3.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage$4.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage$4.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage$5.class" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage$5.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/BasePage.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/BasePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/BasePage.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/BasePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage$2.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage$2.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage$3.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage$3.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/HomePage.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/HomePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/HomePage.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/HomePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/LoginPage.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/LoginPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/LoginPage.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/LoginPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/NavigationPanel$1.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/NavigationPanel$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/NavigationPanel$1.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/NavigationPanel$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/NavigationPanel$2.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/NavigationPanel$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/NavigationPanel$2.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/NavigationPanel$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/NavigationPanel.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/NavigationPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/NavigationPanel.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/NavigationPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/main/UserAuthenticatedWebSession.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/main/UserAuthenticatedWebSession.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/main/UserAuthenticatedWebSession.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/main/UserAuthenticatedWebSession.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/main/WicketApplication.class" afterPath="$PROJECT_DIR$/target/classes/com/crm/main/WicketApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/main/WicketApplication.class" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/main/WicketApplication.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm.war" afterPath="$PROJECT_DIR$/target/crm.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crm/view/BasePage.java" afterPath="$PROJECT_DIR$/src/main/java/com/crm/view/BasePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crm/view/CustomerPage.html" afterPath="$PROJECT_DIR$/src/main/java/com/crm/view/CustomerPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage.html" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/CustomerPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage.html" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/CustomerPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crm/view/CustomerPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/crm/view/CustomerPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crm/view/HomePage.html" afterPath="$PROJECT_DIR$/src/main/java/com/crm/view/HomePage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/HomePage.html" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/HomePage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/HomePage.html" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/HomePage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crm/view/HomePage.java" afterPath="$PROJECT_DIR$/src/main/java/com/crm/view/HomePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crm/view/LoginPage.html" afterPath="$PROJECT_DIR$/src/main/java/com/crm/view/LoginPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/LoginPage.html" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/LoginPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/LoginPage.html" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/LoginPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crm/view/LoginPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/crm/view/LoginPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crm/view/NavigationPanel.html" afterPath="$PROJECT_DIR$/src/main/java/com/crm/view/NavigationPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/crm/view/NavigationPanel.html" afterPath="$PROJECT_DIR$/target/classes/com/crm/view/NavigationPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/NavigationPanel.html" afterPath="$PROJECT_DIR$/target/crm/WEB-INF/classes/com/crm/view/NavigationPanel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crm/view/NavigationPanel.java" afterPath="$PROJECT_DIR$/src/main/java/com/crm/view/NavigationPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crm/main/UserAuthenticatedWebSession.java" afterPath="$PROJECT_DIR$/src/main/java/com/crm/main/UserAuthenticatedWebSession.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crm/main/WicketApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/crm/main/WicketApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/crm/view/BasePage.html" afterPath="$PROJECT_DIR$/src/main/java/com/crm/view/BasePage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/main.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/crm/css/main.css" afterPath="$PROJECT_DIR$/target/crm/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WicketExamples.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2577" max-vertical-offset="3165">
-              <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.47513813" vertical-offset="2607" max-vertical-offset="3210">
+              <caret line="191" column="14" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -119,28 +68,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WicketApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/crm/main/WicketApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="372" max-vertical-offset="915">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1370#1371#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerPage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomerPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/crm/view/CustomerPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3099631" vertical-offset="192" max-vertical-offset="1440">
+            <state vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="1440">
               <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="47" selection-end-column="37" />
               <folding>
                 <element signature="e#2583#2584#0" expanded="true" />
                 <element signature="e#2651#2652#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BasePage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crm/view/BasePage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="420">
+              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -228,7 +174,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/crm/service/HelloSpring.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crm/dao/HibernateCustomerDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crm/view/BasePage.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/crm/view/customerPanel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crm/detachableModel/CustomerModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crm/model/Customer.java" />
@@ -264,9 +209,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/crm/main/WicketApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crm/view/NavigationPanel.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/crm/view/NavigationPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/main.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/crm/view/CustomerPage.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/crm/view/CustomerPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crm/view/BasePage.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/main.css" />
       </list>
     </option>
   </component>
@@ -1045,7 +991,7 @@
       <workItem from="1422904531411" duration="32000" />
       <workItem from="1422904597634" duration="6359000" />
       <workItem from="1422977731337" duration="14266000" />
-      <workItem from="1422992038039" duration="13601000" />
+      <workItem from="1422992038039" duration="13895000" />
     </task>
     <task id="LOCAL-00001" summary="add title bar">
       <created>1422828666941</created>
@@ -1063,7 +1009,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92230000" />
+    <option name="totallyTimeSpent" value="92524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1365" y="27" width="1922" height="1054" extended-state="6" />
@@ -1093,7 +1039,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19786096" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36674008" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36633664" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994652" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1441,14 +1387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crm/view/BasePage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.25" vertical-offset="0" max-vertical-offset="420">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/crm/view/LoginPage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="480">
@@ -1501,14 +1439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="465">
           <caret line="18" column="35" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2577" max-vertical-offset="3165">
-          <caret line="183" column="0" selection-start-line="183" selection-start-column="0" selection-end-line="183" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1568,12 +1498,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/crm/view/CustomerPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3099631" vertical-offset="192" max-vertical-offset="1440">
+        <state vertical-scroll-proportion="0.0" vertical-offset="192" max-vertical-offset="1440">
           <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="47" selection-end-column="37" />
           <folding>
             <element signature="e#2583#2584#0" expanded="true" />
             <element signature="e#2651#2652#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crm/view/BasePage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="420">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47513813" vertical-offset="2607" max-vertical-offset="3210">
+          <caret line="191" column="14" selection-start-line="191" selection-start-column="14" selection-end-line="191" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
