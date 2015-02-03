@@ -7,14 +7,15 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
-
 import org.springframework.transaction.annotation.Transactional;
 
-@Repository("customerDao")
+import javax.annotation.Resource;
+
+
 @Transactional
 public class CustomerDaoImpl implements CustomerDao
 {
-    @Autowired
+    @Resource
     @Qualifier("sessionFactory")
     private SessionFactory sessionFactory;
 
@@ -35,6 +36,11 @@ public class CustomerDaoImpl implements CustomerDao
     @Override
     public void saveCustomer(Customer customer) {
         this.sessionFactory.getCurrentSession().saveOrUpdate(customer);
+    }
+
+    @Override
+    public void deleteCustomer(Customer customer) {
+        this.sessionFactory.getCurrentSession().delete(customer);
     }
 
     @Override

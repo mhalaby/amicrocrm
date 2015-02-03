@@ -9,22 +9,21 @@ import org.springframework.stereotype.Service;
 import com.crm.dao.CustomerDao;
 import com.crm.model.Customer;
 
-@Service("customerService")
 public class CustomerServiceImpl implements CustomerService
 {
-	private static Logger logger = Logger.getLogger( CustomerServiceImpl.class );
-	
-	/**
-	 * The customer DAO class, injected by Spring
-	 */
-	@Autowired
-	protected CustomerDao customerDao;
+    private static Logger logger = Logger.getLogger( CustomerServiceImpl.class );
+
+    /**
+     * The customer DAO class, injected by Spring
+     */
+    @Autowired
+    protected CustomerDao customerDao;
     public List<Customer> getCustomers()
-	{
-		List<Customer> customers = customerDao.getCustomers();
-		logger.info( "customerDao returned " + customers.size() + " customers" );
-		return customers;
-	}
+    {
+        List<Customer> customers = customerDao.getCustomers();
+        logger.info( "customerDao returned " + customers.size() + " customers" );
+        return customers;
+    }
 
     @Override
     public Customer fetch(Long id) {
@@ -35,6 +34,11 @@ public class CustomerServiceImpl implements CustomerService
     public void save(Customer customer) {
         customerDao.saveCustomer(customer);
         logger.info( "customerDao saved");
+    }
 
+    @Override
+    public void delete(Customer customer) {
+        customerDao.deleteCustomer(customer);
+        logger.info( "customerDao deleted");
     }
 }

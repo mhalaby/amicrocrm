@@ -1,0 +1,54 @@
+.container{
+    width: 98%;
+}
+.btn-custom {
+    background-color: #F5F5F5;
+}
+div > .btn-custom{
+    margin-bottom: 11px;
+}
+.titlebar{
+    margin-bottom: 9px;
+    margin-top: -21px;
+}
+.titlebar > div{
+    padding: 3px;
+    padding-left: 31px;
+}
+
+.row {
+    margin-bottom: 11px;
+}
+
+.row > div > h5 {
+    margin-bottom: 5px;
+    color: #4FA9B5;
+}
+.w_content_container{
+
+    width: 100%;
+}
+
+.w_content{
+    height: 210px;
+    overflow: hidden;
+}
+
+.w_content_container .panel-body{
+    padding: 0px;
+}
+.submit-btn{
+    float: right;
+    margin-top: -52px;
+    margin-right: 11px;
+    background-color: #E7E7E7;
+}
+.feedback {
+    margin-top: -82px;
+    margin-left: 148px;
+    position: fixed;
+    background-color: rgba(232, 232, 232, 0.5);
+}
+ul.feedbackPanel{
+    color: red;
+}

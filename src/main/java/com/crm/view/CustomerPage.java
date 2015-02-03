@@ -5,6 +5,7 @@ import com.crm.service.CustomerService;
 import org.apache.log4j.Logger;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
+import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.list.ListItem;
@@ -19,13 +20,14 @@ import java.util.List;
 /**
  * Customerpage
  */
+@AuthorizeInstantiation("ADMIN")
 public class CustomerPage extends BasePage {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
     private static Logger logger = Logger.getLogger( CustomerPage.class );
 
-	@SpringBean
-	protected CustomerService customerService;
-    final ModalWindow customerModal;
+    @SpringBean
+    protected CustomerService customerService;
+    ModalWindow customerModal;
     final ListView<Customer> customersListView;
     LoadableDetachableModel<List<Customer>> customerListModel;
     Form<?> form;
@@ -43,18 +45,28 @@ public class CustomerPage extends BasePage {
         customersListView.setOutputMarkupId(true);
         form.add(customersListView);
         form.setOutputMarkupId(true);
-        customerModal = createNewCustomerModal();
+        customerModal = createNewCustomerModal("customerModal",new Customer());
         this.add(customerModal);
         this.add(createNewButton(customerModal));
     }
     public AjaxLink createNewButton(final ModalWindow customerModal){
         return new AjaxLink<Void>("showCustomerModal")
-            {
-                @Override
-                public void onClick(AjaxRequestTarget target) {
-                    customerModal.show(target);
-                }
-            };
+        {
+            @Override
+            public void onClick(AjaxRequestTarget target) {
+                customerModal.show(target);
+            }
+        };
+    }
+    public AjaxLink createDeleteButton(final Customer customer){
+        return new AjaxLink<Void>("deleteCustomer")
+        {
+            @Override
+            public void onClick(AjaxRequestTarget target) {
+                customerService.delete(customer);
+                target.add(form);
+            }
+        };
     }
     public PropertyListView createListView(){
         return new PropertyListView<Customer>("customers",customerListModel ) {
@@ -64,16 +76,19 @@ public class CustomerPage extends BasePage {
                 item.add(new Label("lastName"));
                 item.add(new Label("organization"));
                 item.add(new Label("email"));
+                ModalWindow editModal = createNewCustomerModal("editCustomerModal",customer);
+                item.add(editModal);
+                item.add(createNewButton(editModal));
+                item.add(createDeleteButton(customer));
             }
         };
     }
 
-    public ModalWindow createNewCustomerModal(){
-        final ModalWindow customerModal = new ModalWindow("customerModal");
-        customerModal.setContent(new NewCustomerPanel(customerModal.getContentId(),new Customer()));
+    public ModalWindow createNewCustomerModal(String componentId, Customer customer){
+        ModalWindow customerModal = new ModalWindow(componentId);
+        customerModal.setContent(new NewCustomerPanel(customerModal.getContentId(),customer));
         customerModal.setCookieName("customer-modal");
         customerModal.setCloseButtonCallback(new ModalWindow.CloseButtonCallback() {
-
             @Override
             public boolean onCloseButtonClicked(AjaxRequestTarget target) {
                 target.add(CustomerPage.this.form);

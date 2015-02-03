@@ -1,5 +1,6 @@
 package com.crm.view;
 
+import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 
@@ -8,6 +9,7 @@ import com.crm.service.CustomerService;
 /**
  * Homepage
  */
+@AuthorizeInstantiation("ADMIN")
 public class HomePage extends BasePage {
 	private static final long serialVersionUID = 1L;
 	

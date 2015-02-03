@@ -35,6 +35,12 @@
                         <td><span wicket:id="lastName"></span></td>
                         <td><span wicket:id="organization"></span></td>
                         <td><span wicket:id="email"></span></td>
+                        <td>
+                            <button class="btn btn-default btn-custom" wicket:id="showCustomerModal"> <span class="glyphicon glyphicon-pencil"></span> </button>
+                            <span></span>
+                            <button class="btn btn-default btn-custom" wicket:id="deleteCustomer"> <span class="glyphicon glyphicon-minus"></span> </button>
+                        </td>
+                        <div wicket:id="editCustomerModal"></div>
                     </tr>
                 </table>
                 </form>
