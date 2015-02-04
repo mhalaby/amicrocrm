@@ -17,8 +17,23 @@ public interface CustomerDao
      * @return		A list of all customers in the database
      */
     public List<Customer> getCustomers();
-    public List<Customer> getCustomersName();
+    /**
+     * saves customer
+     *@param customer
+     *          customer to be saved
+     */
     public void saveCustomer(Customer customer);
+    /**
+     * deletes customer
+    *@param customer
+    *          customer to be deleted
+    */
     public void deleteCustomer  (Customer customer);
-    Customer fetch(Long id);
+    /**
+     * fetches customer by id
+     *@param id
+     *        id of a customer
+     *@return Customer is fetched
+     */
+    Customer getCustomerById(Long id);
 }

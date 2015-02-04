@@ -19,13 +19,14 @@ import javax.servlet.http.HttpSession;
 
 /**
  * Created by muhammad on 03.02.15.
+ * Handles authentication
  */
 public class UserAuthenticatedWebSession extends AuthenticatedWebSession {
     private static Logger logger = Logger.getLogger(UserAuthenticatedWebSession.class );
 
-
     private HttpSession httpSession;
     private String username = "";
+
     @SpringBean(name = "authenticationManager")
     private AuthenticationManager authenticationManager;
     /**
@@ -48,16 +49,18 @@ public class UserAuthenticatedWebSession extends AuthenticatedWebSession {
     @Override
     public boolean authenticate(final String username, final String password)
     {
-        logger.info("starts authenticating.." + username+" "+password);
-        setUsername(username);
+        logger.info("starts authenticating.." + username + " " + password);
         try {
             Authentication auth = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username, password));
+            logger.info("starts authenticating.." + auth);
+
             if (auth.isAuthenticated()) {
                 // the authentication object has to be stored in the SecurityContextHolder and in the HttpSession manually, so that the
                 // security context will be accessible in the next request
                 SecurityContextHolder.getContext().setAuthentication(auth);
                 httpSession.setAttribute(HttpSessionSecurityContextRepository.SPRING_SECURITY_CONTEXT_KEY,
                         SecurityContextHolder.getContext());
+                setUsername(username);
                 return true;
             } else {
                 return false;
@@ -80,7 +83,9 @@ public class UserAuthenticatedWebSession extends AuthenticatedWebSession {
         }
         return roles;
     }
-
+    /**
+     * @Param roles
+     */
     private void addRolesFromAuthentication(Roles roles, Authentication authentication) {
         for (GrantedAuthority authority : authentication.getAuthorities()) {
             roles.add(authority.getAuthority());

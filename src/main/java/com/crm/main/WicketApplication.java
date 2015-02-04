@@ -1,10 +1,10 @@
 package com.crm.main;
 
-import com.crm.view.CustomerPage;
+import com.crm.view.customer.CustomerPage;
 import com.crm.view.HomePage;
 import com.crm.view.LoginPage;
-import org.apache.wicket.authroles.authentication.AbstractAuthenticatedWebSession;
 import org.apache.wicket.authroles.authentication.AuthenticatedWebApplication;
+import org.apache.wicket.authroles.authentication.AuthenticatedWebSession;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.spring.injection.annot.SpringComponentInjector;
 
@@ -38,7 +38,7 @@ public class WicketApplication extends AuthenticatedWebApplication
     }
 
     @Override
-    protected Class<? extends AbstractAuthenticatedWebSession> getWebSessionClass() {
+    protected Class<? extends AuthenticatedWebSession> getWebSessionClass() {
         return UserAuthenticatedWebSession.class;
     }
 

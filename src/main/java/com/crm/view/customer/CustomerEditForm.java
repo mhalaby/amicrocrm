@@ -1,4 +1,4 @@
-package com.crm.view;
+package com.crm.view.customer;
 
 import com.crm.detachableModel.CustomerModel;
 import com.crm.model.Customer;
@@ -19,13 +19,24 @@ import org.apache.wicket.spring.injection.annot.SpringBean;
 
 /**
  * Created by muhammad on 02.02.15.
+ *
+ * The form for editing customers
  */
-public class NewCustomerPanel extends Panel {
+public class CustomerEditForm extends Panel {
     @SpringBean
     private CustomerService customerService;
-
-    public NewCustomerPanel(String contentId,final Customer customer) {
+    /**
+     * The constrictors adds the components to the page and
+     * wraps the customer model
+     *
+     * @param contentId
+     *            The component id
+     *@param customer
+     *          the customer to be edited
+     */
+    public CustomerEditForm(String contentId, final Customer customer) {
         super(contentId);
+
         final IModel<Customer> customerModel = new CustomerModel(customerService, customer);
 
         final FeedbackPanel feedback = new FeedbackPanel("feedback");

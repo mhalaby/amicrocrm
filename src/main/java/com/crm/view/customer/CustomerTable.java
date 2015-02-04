@@ -1,38 +1,48 @@
-package com.crm.view;
+package com.crm.view.customer;
 
-import com.crm.main.UserAuthenticatedWebSession;
 import com.crm.model.Customer;
 import com.crm.service.CustomerService;
-import org.apache.log4j.Logger;
-import org.apache.wicket.Component;
+import com.crm.view.BasePanel;
+import com.crm.view.HomePage;
+import com.crm.view.customer.CustomerEditForm;
 import org.apache.wicket.ajax.AjaxRequestTarget;
 import org.apache.wicket.ajax.markup.html.AjaxLink;
-import org.apache.wicket.authroles.authorization.strategies.role.annotations.AuthorizeInstantiation;
+import org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.list.ListItem;
 import org.apache.wicket.markup.html.list.ListView;
 import org.apache.wicket.markup.html.list.PropertyListView;
-import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.LoadableDetachableModel;
 import org.apache.wicket.spring.injection.annot.SpringBean;
-import org.apache.wicket.extensions.ajax.markup.html.modal.ModalWindow;
+
 import java.util.List;
 
 /**
- * Customerpage
+ * Created by muhammad on 04.02.15.
+ *
+ * The table for views the customers list
+ * The table is used for adding, editing and deleting customers
+ *
  */
-public class CustomerPage extends BasePage {
-    private static final long serialVersionUID = 1L;
-    private static Logger logger = Logger.getLogger( CustomerPage.class );
-
+public class CustomerTable extends BasePanel {
     @SpringBean
     protected CustomerService customerService;
     ModalWindow customerModal;
     final ListView<Customer> customersListView;
     LoadableDetachableModel<List<Customer>> customerListModel;
     Form<?> form;
-    public CustomerPage() {
+
+    /**
+     * The constructor adds the components to the page and
+     * wraps the customer model
+     *
+     * @param id
+     *            The component id
+     *
+     */
+    public CustomerTable(String id) {
+        super(id);
         customerListModel = new LoadableDetachableModel<List<Customer>>() {
             @Override
             protected List<Customer> load() {
@@ -53,7 +63,14 @@ public class CustomerPage extends BasePage {
         checkRoles(newButton);
         this.add(createGoHomeButton());
     }
-
+    /**
+     * create the New button for adding customers and bind it to the modal
+     *
+     *
+     * @param customerModal
+     *            modal to be binded
+     *  @return AjaxLink
+     */
     public AjaxLink createNewButton(final ModalWindow customerModal){
         return new AjaxLink<Void>("showCustomerModal")
         {
@@ -63,6 +80,12 @@ public class CustomerPage extends BasePage {
             }
         };
     }
+    /**
+     * create the Go to home button for adding customers and bind it to the homepage
+     *
+     *
+     *  @return AjaxLink
+     */
     public AjaxLink createGoHomeButton(){
         return new AjaxLink<Void>("home")
         {
@@ -72,6 +95,14 @@ public class CustomerPage extends BasePage {
             }
         };
     }
+    /**
+     * create the Delete button which deletes a customer
+     *
+     *
+     * @param customer
+     *            customer to be deleted
+     *  @return AjaxLink
+     */
     public AjaxLink createDeleteButton(final Customer customer){
         return new AjaxLink<Void>("deleteCustomer")
         {
@@ -82,6 +113,12 @@ public class CustomerPage extends BasePage {
             }
         };
     }
+    /**
+     * create the list of customers. Also, attaches a modal to every edit button
+     *
+     *
+     *  @return PropertyListView
+     */
     public PropertyListView createListView(){
         return new PropertyListView<Customer>("customers",customerListModel ) {
             protected void populateItem(ListItem<Customer> item) {
@@ -101,15 +138,24 @@ public class CustomerPage extends BasePage {
             }
         };
     }
-
+    /**
+     * The method creates a Customer Modal and bind a customer to it.
+     * It also updates the table when the Modal is closed
+     *
+     * @param componentId
+     *            The component id
+     *  @param customer
+     *          customer binded to the modal
+     *  @return ModalWindow
+     */
     public ModalWindow createNewCustomerModal(String componentId, Customer customer){
         ModalWindow customerModal = new ModalWindow(componentId);
-        customerModal.setContent(new NewCustomerPanel(customerModal.getContentId(),customer));
+        customerModal.setContent(new CustomerEditForm(customerModal.getContentId(),customer));
         customerModal.setCookieName("customer-modal");
         customerModal.setCloseButtonCallback(new ModalWindow.CloseButtonCallback() {
             @Override
             public boolean onCloseButtonClicked(AjaxRequestTarget target) {
-                target.add(CustomerPage.this.form);
+                target.add(form);
                 return true;
             }
         });

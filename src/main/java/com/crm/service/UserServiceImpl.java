@@ -25,13 +25,12 @@ import org.apache.log4j.Logger;
  * 
  * @author muhammad
  */
-public class UserServiceImpl  implements UserDetailsService
+public class UserServiceImpl implements UserDetailsService
 {
     private static Logger logger = Logger.getLogger(UserServiceImpl.class );
     /**
      * The user DAO class, injected by Spring
      */
-
     @Autowired
     protected UserDao userDao;
 
@@ -39,19 +38,34 @@ public class UserServiceImpl  implements UserDetailsService
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userDao.getUser(username);
         logger.info("USER "+ username);
-        List < GrantedAuthority > authorities =
-                buildUserAuthority(user.getUserRole());
-
+        List < GrantedAuthority > authorities = buildUserAuthority(user.getUserRole());
         return buildUserForAuthentication(user, authorities);
     }
-
-    // Converts com.mkyong.users.model.User user to
-    // org.springframework.security.core.userdetails.User
+    /**
+     * The method coverts crm.model.user to spring user required for authentication
+     *
+     * @param user
+     *            The current crm.model.user object
+     * @param authorities
+     *             List of authorites provided per user
+     *
+     * @return authenticated user
+     *             org.springframework.security.core.userdetails.User token
+     */
     private  org.springframework.security.core.userdetails.User buildUserForAuthentication(User user,
                                             List<GrantedAuthority> authorities) {
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),true,true,true,true, authorities);
     }
 
+    /**
+     * The method builds the user roles list
+     *
+     * @param userRoles
+     *            The set of user roles
+     *
+     * @return  List
+     *             list of roles
+     */
     private List<GrantedAuthority> buildUserAuthority(Set<UserRole> userRoles) {
 
         Set<GrantedAuthority> setAuths = new HashSet<GrantedAuthority>();

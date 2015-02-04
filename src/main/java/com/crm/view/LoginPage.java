@@ -18,24 +18,14 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 public final class LoginPage extends WebPage
 {
     /**
-     * Construct
+     * Constructor
+     *  That is all you need to add a logon panel to your application with rememberMe
+     *  functionality based on Cookies. Meaning username and password are persisted in a Cookie.
+     *  Please see ISecuritySettings#getAuthenticationStrategy() for details.
      */
     public LoginPage()
     {
-        this(null);
-    }
 
-    /**
-     * Constructor
-     *
-     * @param parameters
-     *            The page parameters
-     */
-    public LoginPage(final PageParameters parameters)
-    {
-        // That is all you need to add a logon panel to your application with rememberMe
-        // functionality based on Cookies. Meaning username and password are persisted in a Cookie.
-        // Please see ISecuritySettings#getAuthenticationStrategy() for details.
         add(new SignInPanel("signInPanel",false));
     }
 }

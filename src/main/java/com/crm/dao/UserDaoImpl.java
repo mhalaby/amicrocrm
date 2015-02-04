@@ -24,6 +24,12 @@ public class UserDaoImpl implements UserDao
 
     private static Logger logger = Logger.getLogger(UserDaoImpl.class );
 
+    /**
+     * sets a session factory injected by the bean
+     *
+     * @param sessionFactory
+     *
+     */
     public void setSessionFactory(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }

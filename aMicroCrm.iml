@@ -145,5 +145,6 @@
     <orderEntry type="library" name="Maven: org.apache.abdera:abdera-extensions-main:0.4.0-incubating" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jettison:jettison:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.xmlbeans:xmlbeans:2.3.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:3.2.4.RELEASE" level="project" />
   </component>
 </module>
